@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  meo-panel:
+    build: .
+    container_name: meo-pasarguard
+    ports:
+      - "8080:8080"
+    environment:
+      - ADMIN_USER=admin
+      - ADMIN_PASS=meo123456
+    restart: always
