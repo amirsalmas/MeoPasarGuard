@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل میو پاسارگارد | Meo PasarGuard</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #1a1a2e;
+            --stone: #e0e0e0;
+            --bg: #0f0f13;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--stone);
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Persepolis_-_The_Gate_of_All_Nations.jpg/1200px-Persepolis_-_The_Gate_of_All_Nations.jpg');
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+        .panel-box {
+            background: rgba(26, 26, 46, 0.95);
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            /* آدرس عکس نماد کوروش یا فروهر رو اینجا بذار */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Faravahar_silver_coin.png/200px-Faravahar_silver_coin.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        button {
+            background: var(--gold);
+            color: var(--dark-blue);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #b8962e;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid var(--gold);
+            background: var(--bg);
+            color: white;
+            box-sizing: border-box;
+        }
+        .telegram-links {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+        .telegram-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel-box">
+        <div class="logo"></div>
+        <h1>پنل میو پاسارگارد</h1>
+        <p>ترکیب قدرت، امنیت و شکوه هخامنشیان</p>
+        
+        <div id="login-form">
+            <input type="text" id="username" placeholder="نام کاربری (پیش‌فرض: admin)">
+            <input type="password" id="password" placeholder="رمز عبور (پیش‌فرض: meo123456)">
+            <button onclick="login()">ورود به پنل</button>
+        </div>
+
+        <div class="telegram-links">
+            <a href="https://t.me/meov2ray" target="_blank">🌐 کانال MeoV2ray</a> |
+            <a href="https://t.me/meodeploybot" target="_blank">🤖 ربات دیپلوی</a> |
+            <a href="https://t.me/Fdstucshbot" target="_blank">💎 بات مافیا</a> |
+            <a href="https://t.me/soefsiuseubot" target="_blank">📧 ایمیل فیک</a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            
+            if (user === 'admin' && pass === 'meo123456') {
+                alert('خوش آمدید ای پادشاه! (کدهای بخش داشبورد رو باید خودت توسعه بدی)');
+                // در اینجا می‌تونی کاربر رو به صفحه داشبورد هدایت کنی
+            } else {
+                alert('نام کاربری یا رمز عبور اشتباه است!');
+            }
+        }
+    </script>
+</body>
+</html>
